@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 2em; /* 75% larger than default */
+}
+
+section {
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lightblue;
+    padding: 5px 10px;
+    border: 1px solid black;
+    font-size: 125%; /* 25% larger than default */
+}
+
+.content {
+    padding: 20px;
+}
+
+/* Desktop view */
+.desktop-view {
+    float: left;
+    width: 33.33%; /* 3 sections equally spaced */
+}
+
+/* Tablet view */
+@media (max-width: 991px) {
+    .desktop-view {
+        width: 50%; /* 2 sections in a row */
+    }
+    .desktop-view:nth-child(3) {
+        clear: both; /* start a new row for the 3rd section */
+    }
+}
+
+/* Mobile view */
+@media (max-width: 767px) {
+    .desktop-view {
+        width: 100%; /* 1 section in a row */
+    }
+}
